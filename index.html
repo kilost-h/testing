@@ -6,9 +6,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <script src="./js/jquery.min.js"></script>
         <script src="./js/bootstrap.min.js"></script>
     </head>
+
     <style type="text/css">
         body {
             font-family: Microsoft JhengHei;
@@ -225,6 +227,18 @@
     var white_str = "rgb(255, 255, 255)";
     var black_str = "rgb(0, 0, 0)";
     var or_filter = true;
+
+    $(document).ready(function(){
+        init();
+        $("#start_filter").on("click", startFilter);
+        $("#and_or_filter").on("click", andOrChange);
+        $("#reset_skill").on("click", resetSkill);
+        $("#reset_all").on("click", resetAll);
+        $("#reset_attr").on("click", resetAttr);
+        $("#reset_race").on("click", resetRace);
+        $("#reset_star").on("click", resetStar);
+    });
+    
     function init()
         {
             $(".filter-row").html(function()
